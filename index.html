@@ -88,23 +88,25 @@
     <section id="contact" class="section bg-light" data-aos="fade-up">
         <div class="container">
             <h2>Contacto</h2>
-            <form action="https://formspree.io/f/xjkblqkb" method="POST">
+            <form id="contact-form">
                 <div class="form-group" data-aos="fade-up" data-aos-delay="100">
-                    <label for="name">Nombre</label>
+                    <label for="name">Nombre <span class="required">*</span></label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group" data-aos="fade-up" data-aos-delay="200">
-                    <label for="email">Correo Electrónico</label>
+                    <label for="email">Correo Electrónico <span class="required">*</span></label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group" data-aos="fade-up" data-aos-delay="300">
-                    <label for="message">Mensaje</label>
+                    <label for="message">Mensaje <span class="required">*</span></label>
                     <textarea id="message" name="message" rows="4" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" data-aos="fade-up" data-aos-delay="400">Enviar</button>
+                <button type="submit" class="btn btn-primary disabled-button" data-aos="fade-up" data-aos-delay="400"
+                    disabled>Enviar</button>
             </form>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer data-aos="fade-up">
@@ -124,6 +126,31 @@
         (function () {
             emailjs.init("YOUR_USER_ID"); // Reemplaza "YOUR_USER_ID" con tu User ID de EmailJS
         })();
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contact-form");
+            const submitButton = form.querySelector("button[type='submit']");
+
+            function checkFormValidity() {
+                const isValid = form.checkValidity();
+                submitButton.disabled = !isValid;
+
+                if (isValid) {
+                    submitButton.classList.remove('disabled-button');
+                    submitButton.classList.add('btn-primary');  // Volver a agregar btn-primary cuando se habilita
+                } else {
+                    submitButton.classList.add('disabled-button');
+                    submitButton.classList.remove('btn-primary');  // Remover btn-primary cuando está deshabilitado
+                }
+            }
+
+            form.addEventListener("input", checkFormValidity);
+
+            // Comprobar la validez del formulario al cargar la página
+            checkFormValidity();
+        });
+
+
+
     </script>
     <!-- jQuery (necesario para Bootstrap JavaScript) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

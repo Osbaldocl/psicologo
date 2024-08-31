@@ -201,4 +201,42 @@ footer {
     color: #ffffff !important; /* Texto blanco al hover */
 }
 
+/* Indicador de campo obligatorio */
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+/* Estilo para los campos de entrada */
+input:required:invalid, textarea:required:invalid {
+    border-color: red;
+    background-color: #ffe6e6;
+}
+
+input:required:valid, textarea:required:valid {
+    border-color: green;
+    background-color: #e6ffe6;
+}
+
+/* Estilo para el botón deshabilitado */
+button.disabled-button {
+    background-color: #cccccc; /* Fondo gris claro */
+    color: #888888; /* Texto gris oscuro */
+    cursor: not-allowed; /* Cursor de no permitido */
+    border: 1px solid #888888; /* Borde gris oscuro */
+    opacity: 0.6; /* Reducir la opacidad */
+    pointer-events: none; /* Desactivar clics */
+}
+
+
+.disabled-button:enabled {
+    background-color: #007bff; /* Color de fondo azul cuando está habilitado */
+    color: white;
+    cursor: pointer; /* Cambia el cursor a la mano cuando está habilitado */
+    pointer-events: auto; /* Reactiva los eventos del mouse */
+    opacity: 1; /* Restaura la opacidad completa */
+    border: none; /* Elimina el borde cuando está habilitado */
+}
+
+
 
