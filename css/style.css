@@ -1,0 +1,185 @@
+/* Estilos globales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #003366;
+    color: #FFFFFF;
+    padding: 15px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-nav li {
+    margin-left: 20px;
+}
+
+.navbar-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav a:hover {
+    color: #00BFFF;
+}
+
+/* Hero Section */
+#hero {
+    background-image: linear-gradient(to bottom, rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.5)), url('images/hero-bg.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.btn {
+    background-color: #00BFFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0080FF;
+}
+
+/* Secciones */
+.section {
+    padding: 60px 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.bg-light {
+    background-color: #f4f4f4;
+}
+
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #002244;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
