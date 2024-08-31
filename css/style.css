@@ -183,3 +183,22 @@ footer {
         opacity: 1;
     }
 }
+/* Estilo del dropdown */
+.dropdown-menu {
+    background-color: #003366 !important; /* Fondo azul oscuro */
+    border: none !important; /* Eliminar bordes */
+}
+
+.dropdown-item {
+    color: #f0f0f0 !important; /* Texto gris claro visible desde el inicio */
+    background-color: #003366 !important; /* Fondo azul oscuro para cada ítem */
+    padding: 10px 20px !important;
+    transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+.dropdown-item:hover {
+    background-color: #00509e !important; /* Fondo azul más claro al hover */
+    color: #ffffff !important; /* Texto blanco al hover */
+}
+
+

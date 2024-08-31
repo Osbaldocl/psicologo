@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,41 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- AOS CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
+
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a href="#" class="navbar-brand">Psicólogo XYZ</a>
-            <ul class="navbar-nav">
-                <li><a href="#about">Sobre Mí</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
+            <a class="navbar-brand" href="#">Psicólogo XYZ</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Navegación
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#about">Sobre Mí</a>
+                            <a class="dropdown-item" href="#services">Servicios</a>
+                            <a class="dropdown-item" href="#contact">Contacto</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
+
 
     <!-- Hero Section -->
     <section id="hero" data-aos="fade-in">
@@ -35,7 +58,8 @@
     <section id="about" class="section" data-aos="fade-up">
         <div class="container">
             <h2>Sobre Mí</h2>
-            <p>Soy el Dr. XYZ, psicólogo con más de 15 años de experiencia ayudando a personas a superar sus problemas emocionales y mentales.</p>
+            <p>Soy el Dr. XYZ, psicólogo con más de 15 años de experiencia ayudando a personas a superar sus problemas
+                emocionales y mentales.</p>
         </div>
     </section>
 
@@ -90,16 +114,24 @@
     <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 1200,  // Duración de la animación en milisegundos
-        once: true,      // Si es true, la animación se ejecuta una sola vez
-      });
+        AOS.init({
+            duration: 1200,  // Duración de la animación en milisegundos
+            once: true,      // Si es true, la animación se ejecuta una sola vez
+        });
     </script>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
-       (function(){
-          emailjs.init("YOUR_USER_ID"); // Reemplaza "YOUR_USER_ID" con tu User ID de EmailJS
-       })();
-    </script>    
+        (function () {
+            emailjs.init("YOUR_USER_ID"); // Reemplaza "YOUR_USER_ID" con tu User ID de EmailJS
+        })();
+    </script>
+    <!-- jQuery (necesario para Bootstrap JavaScript) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>
